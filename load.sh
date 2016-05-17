@@ -21,10 +21,6 @@ fi;
 
 touch '/tmp/.naomiLock';
 
-if [ "${CURRENT}" != "" ]; then
-	ln -sf "${BIN}" "${CURRENT}"
-fi;
-
 # http://www.ostricher.com/2014/10/the-right-way-to-get-the-directory-of-a-bash-script/
 get_script_dir () {
 	SOURCE="${BASH_SOURCE[0]}"
@@ -43,6 +39,12 @@ echo "Loading '${BIN}' to '${IP}' ...";
 echo "---"
 
 "$(get_script_dir)/triforcetools.py" "${IP}" "${BIN}" 2>&1
+RES=${?}
 
 echo "---"
+
+if [ "${RES}" = "0" -a "${CURRENT}" != "" ]; then
+	ln -svf "${BIN}" "${CURRENT}"
+fi;
+
 rm -Rf '/tmp/.naomiLock'
