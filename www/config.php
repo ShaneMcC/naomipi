@@ -28,4 +28,9 @@
 
 	/** Game files to ignore in game list. */
 	$ignoredFiles = array();
+
+	/** User Specific Config. */
+	if (file_exists(dirname(__FILE__) . '/config.local.php')) {
+		require_once(dirname(__FILE__) . '/config.local.php');
+	}
 ?>
