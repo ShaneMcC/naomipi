@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<title>Naomi PI Loader</title>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" >
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<style>
@@ -66,7 +68,7 @@
 	</head>
 	<body>
     <!-- Fixed navbar -->
-		<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
